@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.primary-heading{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(212, 212, 212));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 12rem;
+    letter-spacing: 2.1rem;
+    animation-name: primary-trans;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.secondary-heading{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(212, 212, 212));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 6rem;
+    animation-name: secondary-trans;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.modes{
+    background-image: linear-gradient(to right, rgb(29, 29, 29, 0.8), rgb(49, 49, 49, 0.8)), url(./images/index-restaurant.jpeg);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+}
+
+.light-dark{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: rgb(128, 128, 128, 0.1);
+    height: 21rem;
+    width: 40%;
+    opacity: 0;
+    animation-name: visible-div;
+    animation-delay: 2.1s;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.mode{
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    color: rgb(190, 190, 190);
+}
+
+.links{
+    text-decoration: none;
+    color: teal;
+    font-size: 2rem;
+}
+
+.links:hover{
+    background-color: lightgrey;
+    color: rgb(27, 27, 27);
+    padding: 1rem;
+}
+
+@keyframes primary-trans{
+    from{transform: translateX(-29rem); opacity: 0;}
+    to{transform: translateX(0rem); opacity: 1;}
+}
+
+@keyframes secondary-trans{
+    from{transform: translateX(29rem); opacity: 0;}
+    to{transform: translateX(0rem); opacity: 1;}
+}
+
+@keyframes visible-div{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@media screen and (max-width: 700px) {
+    .primary-heading{
+        font-size: 10rem;
+    }
+
+    .secondary-heading{
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 606px) {
+    .primary-heading{
+        font-size: 7rem;
+    }
+
+    .secondary-heading{
+        font-size: 3.5rem;
+    }
+
+    .light-dark{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .primary-heading{
+        font-size: 6rem;
+    }
+
+    .secondary-heading{
+        font-size: 3rem;
+    }
+
+    .light-dark{
+        top: 35%;
+    }
+}
